@@ -1,0 +1,341 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f4f7fb;
+    color: #1e293b;
+}
+
+/* HEADER */
+header {
+    height: 80px;
+    background: white;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #2563eb;
+}
+
+.avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #2563eb;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.user-menu {
+    position: relative;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    background: white;
+    width: 180px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.dropdown a {
+    display: block;
+    padding: 14px;
+    text-decoration: none;
+    color: #1e293b;
+}
+
+.dropdown a:hover {
+    background: #f1f5f9;
+}
+
+/* DASHBOARD */
+.dashboard {
+    width: 95%;
+    max-width: 1400px;
+    margin: 30px auto;
+}
+
+/* TOP CARDS */
+.cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    border-radius: 18px;
+    padding: 25px;
+    width: 320px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.card span {
+    color: gray;
+    font-size: 15px;
+}
+
+.card h2 {
+    margin-top: 10px;
+    font-size: 34px;
+}
+
+.card input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+/* FIXED BUTTON */
+.card button {
+    width: fit-content;
+    padding: 12px 22px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* CONTENT */
+.content {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+    align-items: flex-start;
+}
+
+.transaction-box {
+    width: 350px;
+    background: white;
+    border-radius: 18px;
+    padding: 25px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+}
+
+.transaction-box h2 {
+    margin-bottom: 20px;
+}
+
+.transaction-box input,
+.transaction-box select {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+}
+
+.transaction-box button {
+    padding: 12px 20px;
+    border: none;
+    background: #2563eb;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* HISTORY */
+.history-box {
+    flex: 1;
+    background: white;
+    border-radius: 18px;
+    padding: 25px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+    overflow-x: auto;
+}
+
+.history-box h2 {
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+    color: gray;
+    padding: 15px;
+    border-bottom: 2px solid #eee;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+tr:hover {
+    background: #f8fafc;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .transaction-box,
+    .history-box {
+        width: 100%;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+}
+/* LOGIN & SIGNUP PAGE */
+
+.signup-container{
+    width: 100%;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.signup-box{
+    width: 100%;
+    max-width: 420px;
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+    animation: fadeIn 0.4s ease;
+}
+
+.signup-box h2{
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 28px;
+    color: #1e293b;
+}
+
+.signup-box input{
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 16px;
+    border: 1px solid #dbe2ea;
+    border-radius: 12px;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.signup-box input:focus{
+    border-color: #2563eb;
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(37,99,235,0.12);
+}
+
+.signup-box button{
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 12px;
+    transition: 0.3s;
+}
+
+.signup-box button[type="submit"]{
+    background: #2563eb;
+    color: white;
+}
+
+.signup-box button[type="submit"]:hover{
+    background: #1d4ed8;
+}
+
+.signup-box button[type="reset"]{
+    background: #f1f5f9;
+    color: #1e293b;
+}
+
+.signup-box button[type="reset"]:hover{
+    background: #e2e8f0;
+}
+
+.signup-box p{
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #64748b;
+}
+
+.signup-box a{
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.signup-box a:hover{
+    text-decoration: underline;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+    .signup-box{
+        padding: 25px;
+        border-radius: 16px;
+    }
+
+    .signup-box h2{
+        font-size: 24px;
+    }
+}
